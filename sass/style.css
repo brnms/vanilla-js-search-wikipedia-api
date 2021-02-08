@@ -161,7 +161,7 @@ img {
   text-align: center;
   letter-spacing: 0.1rem;
   border: 0;
-  outline: 0;
+  outline: none;
   min-width: 150px;
 }
 
