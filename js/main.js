@@ -1,5 +1,5 @@
 import { setSearchFocus, showClearTextButton, clearSearchText, clearPushListener } from './searchBar.js';
-import { deleteSearchResults, buildSearchResults, ClearStatsLine, setStatsLine } from './searchResults.js';
+import { deleteSearchResults, buildSearchResults, clearStatsLine, setStatsLine } from './searchResults.js';
 import { getSearchTerm, retrieveSearchResults } from './dataFunctions.js';
 
 document.addEventListener('readystatechange', (event) => {
@@ -34,7 +34,7 @@ const submitTheSearch = (event) => {
 
 // Procedural
 const processTheSearch = async () => {
-    ClearStatsLine();
+    clearStatsLine();
     const searchTerm = getSearchTerm();
     if(searchTerm === "") return;
     const resultArray = await retrieveSearchResults(searchTerm);
